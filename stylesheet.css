@@ -167,6 +167,7 @@ img {
     overflow: hidden;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .grid {
@@ -213,7 +214,7 @@ img {
 
 .title2 {
     font-family: "Viaoda Libre";
-    font-size: 7vmin;
+    font-size: 6vmin;
     color: white;
     text-shadow: 5px 5px 20px  #000000;
     margin-top: -20%;
