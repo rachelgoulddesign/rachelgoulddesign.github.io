@@ -166,6 +166,7 @@ img {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .grid {
