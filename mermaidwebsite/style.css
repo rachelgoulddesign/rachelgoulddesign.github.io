@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#3e02ad, #8a01cf);
+    background-repeat: no-repeat;
+    perspective: 1000px;
+
+}
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.scene, .object {
+    transform-style: preserve-3d;
+
+    
+  }
+
+ .object {    
+    transform: perspective( 1000px );
+    
+}
+
+.face {
+    position: absolute;
+    
+}
+
+.background {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position:fixed;
+}
+
+.moon {
+    width: 15vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    animation: moonn 5s ease infinite;
+}
+
+.clouds img{
+    width: 35vw;
+    height: 200px;
+}
+
+.clouds .cloud1 {
+    margin-top: 2vw;
+    margin-left: 10vw;
+    animation: cloudMove 7s ease-in-out infinite;
+}
+
+.clouds .cloud2 {
+    margin-left: 45vw;
+    margin-top: -11vh;
+    animation: cloudMove 5s ease-in-out infinite;
+}
+
+.scene, .object, .face {
+    --rX: 0deg;
+    --rY: 0deg; 
+    --rZ: 0deg;
+    --tX: 0px; 
+    --tY: 0px; 
+    --tZ: 0px;
+    transform: rotateX(var( --rX)) rotateY(var( --rY)) rotateZ(var( --rZ)) translate3d(var( --tX),var( --tY),var( --tZ));
+}
+
+.structure { 
+    width:750px; height:750px; 
+    margin-top: -4vh;
+    --rY:-45deg;--rX:-15deg;--tZ:150px;
+    user-select: none
+}
+
+.structure .face {
+    width: 750px;height: 750px;
+}
+.structure .top { 
+    --rX:90deg;--tZ:-10px;
+}
+
+.structure .left { 
+    height: 800px;
+    --rY:-90deg;--tZ: 375px; --tY: 180px;
+}
+
+.structure .right { 
+    height: 800px;
+    --rY:0deg;--tZ: -375px;--tY: 180px;
+}
+.structure .bottom { 
+    --rX:-90deg;--tZ:600px;
+    opacity: 60%;
+}
+
+.structure .bottom2 { 
+    --rX:-90deg;--tZ:620px;
+}
+
+.structure .bottom3 { 
+    --rX:-90deg;--tZ:610px;
+    opacity: 80%;
+}
+
+.structure .top1 { 
+    --rX:90deg; --tZ:-35px;
+}
+.structure .top2 { 
+    --rX:90deg;--tZ:-50px;
+}
+.structure .top3 { 
+    --rX:90deg;--tZ:-65px;
+}
+.structure .top4 { 
+    --rX:90deg;--tZ:-80px;
+}
+
+.mermaid {
+    height: 400px;
+    --tX: 250px; --tY: -140px; --tZ: -40px;
+}
+
+.mermaidWater {
+    width: 200px;
+    --rX: 90deg;--tX: 220px;--tY: -50px;--tZ: 90px;
+
+}
+
+.move {
+    --rX: -15deg;
+    --tX: 0px;--tY: 0px;--tZ: 0px;
+    transition: transform 1s ease;
+    
+}
+
+.top, .top1, .top2, .top3, .top4 {
+    opacity: 60%;
+    animation: 15s bright ease infinite;
+}
+
+.rocks {
+    --rX: -15deg;
+
+}
+
+.rocksSide {
+    --rX: 250deg;
+}
+
+.rock1 {
+    --tX: -240px;--tY: -130px;--tZ: 90px;
+    width: 200px;
+}
+
+.rock2 {
+    --tX: -90px; --tY: -170px;--tZ: -30px;
+    width: 300px;height: 200px;
+
+}
+
+.rock3 {
+    --tX: 0px;--tY: -230px;--tZ: -150px;
+    height: 300px; width: 200px;
+}
+
+.rock4 {
+    --tX: 140px;--tY: -240px; --tZ: -250px;
+    height: 300px;width: 200px;
+}
+
+.rock5 {
+    --tX: 300px;--tY: -200px;--tZ: -180px;
+    width: 200px;
+}
+
+.rock6 {
+    --tX: 450px;--tY: -140px;--tZ: -90px;
+    width: 300px;
+
+}
+
+.rock7 {
+    --tX: 630px;--tY: -150px; --tZ: 100px;
+    width: 200px;
+}
+
+.rockS1 {
+    --tX: -250px;--tY: -150px;--tZ: -50px;
+    width: 200px;
+    
+}
+
+.rockS2 {
+    --tX: -130px;--tY: -80px;--tZ: -30px;
+    width: 300px; height: 200px;
+
+}
+
+.rockS3 {
+    --tX: 20px;--tY: 40px;--tZ: -40px;
+    width: 200px;height: 200px;
+
+}
+
+.rockS4 {
+    --tX: 140px;--tY: 180px; --tZ: -60px;
+    width: 200px;height: 150px;
+}
+
+.rockS5 {
+    --tX: 330px;--tY: 80px;--tZ: -60px;
+    width: 200px;
+}
+
+.rockS6 {
+    --tX: 450px;--tY: 0px;--tZ: -20px;
+    width: 300px;
+}
+
+.rockS7 {
+    --tX: 630px; --tY: -180px;--tZ: -40px;
+    width: 200px;
+}
+
+
+.fish {
+    --rX: -15deg;
+    transition: transform 1s ease;
+}
+
+.fish:hover {
+    animation: fish-hover 1s linear -2s infinite;
+
+} 
+
+.fish1 {
+    --tX: -80px;--tY: 70px;    --tZ: -60px;
+    width: 200px;    height: 220px;
+    animation: fish-swim 2s linear -2s infinite;
+
+}
+
+.fish2 {
+    --tX: 100px;--tY: 120px;--tZ: -170px;
+    width: 150px;height: 60px;
+    animation: fish-swim 5s linear -2s infinite;
+
+}
+
+.fish3 {
+    --tX: 442px;--tY: 340px;--tZ: 170px;
+    width: 130px;height: 100px;
+    animation: fish-swim 4s linear -2s infinite reverse;
+
+}
+
+.fish4 {
+    --tX: 270px;--tY: 440px;--tZ: 220px;
+    width: 200px;height: 120px;
+    animation: fish-swim 3s linear -2s infinite reverse;
+
+}
+
+.fish5 {
+    --tX: 80px;--tY: 260px;--tZ: -10px;
+    width: 100px;height: 70px;
+    animation: fish-swim 6s linear -2s infinite;
+
+}
+
+.fish6 {
+    --tX: 140px;--tY: 180px;--tZ: -300px;
+    width: 200px;height: 90px;
+    animation: fish-swim 2s linear -2s infinite;
+
+}
+
+.greenRock, .greenRock2{
+    --tX: 190px;--tY: 420px;--tZ: -300px;
+    width: 140px;height: 90px;
+}
+
+.waterrocks, .waterrocks2 {
+    --rX: -15deg;
+}
+
+.waterrocks {
+    animation: rockColour 5s linear infinite;
+}
+
+
+.purpleRock, .purpleRock2 {
+    --tX: 260px;--tY: 500px;--tZ: -300px;
+    width: 160px;height: 70px;
+}
+
+.octopus {
+    --rX: -15deg;
+    --tX: 140px;--tY: 210px;--tZ: 10px;
+    width: 250px;height: 250px;
+    animation: octopus-swim 6s ease-in-out infinite;
+}
+
+.octopus:hover{
+    transition: transform 1s ease;
+    --rZ:-360deg;
+}
+
+.coral {
+    --rX: -15deg;
+}
+
+.coral:hover {
+    filter: hue-rotate(30deg);
+    transition: transform 1s ease;
+    --tZ:100px;   
+}
+
+.coral:active{
+    --rZ:-5deg;
+    filter: hue-rotate(330deg);
+}
+
+.pinkCoral {
+    --rY: -1deg;
+    --tX: 510px; --tY: 330px;--tZ: 100px;
+    width: 250px;height: 250px;
+}
+
+.purpleCoral {
+    --rY: -2deg;
+    --tX: 530px;--tY: 330px;--tZ: 90px;
+    width: 250px;height: 250px;
+}
+
+.greenCoral {
+    --rY: -3deg;
+    --tX: 570px; --tY: 310px; --tZ: 78px;
+    width: 200px;height: 280px;
+}
+
+.jellyfish {
+    --rY: -12deg;--rX: -15deg;
+    --tX: -371px;--tY: 420px;--tZ: 130px;
+    width: 160px;height: 340px;
+}
+
+.jellyfish:active {
+    animation: octopus-swim 2s ease-in-out infinite;
+}
+
+.seaweed {
+    --rX: -15deg;
+}
+
+.seaweed:active {
+    filter: invert(100%);   
+}
+
+.seaweed1 {
+    --tX: 100px;--tY: 130px;--tZ: 110px;
+    width: 180px;height: 470px;
+
+}
+
+.seaweed2 {
+    --rX: 1deg; --rY: -42deg;
+    --tX: -80px;--tY: 220px;--tZ: 260px;
+    width: 140px;height: 360px;
+}
+.seaweed3 {
+    --rX: -9deg; --rY: 43deg;
+    --tX: -30px;--tY: 210px;--tZ: 520px;
+    width: 200px;height: 330px;
+}
+.seaweed4 {
+    --rX: 1deg;--rY: -22deg;
+    --tX: 170px;--tY: 260px;--tZ: -160px;
+    width: 230px;height: 330px;
+}
+.seaweed5 {
+    --rX: 1deg; --rY: 3deg;
+    --tX: -30px;--tY: 250px;--tZ: 290px;
+    width: 160px;height: 340px;
+}
+
+.starfish {
+    --tX: 160px;--tY: 545px;--tZ: 138px;
+    width: 160px;height: 190px;
+}
+
+.clam {
+    --rX: 50deg;--rY: 0deg;--rZ: 0deg;
+    --tX: -80px;--tY: 650px;--tZ: -289px;
+    width: 160px;height: 210px;
+}
+
+
+.oyster {
+    --tX: -90px;--tY: 570px;--tZ: 380px;
+    width: 200px;height: 260px;
+    transition: transform ease 1s;
+    filter: opacity(0%);
+}
+
+.oyster:hover {
+    filter: opacity(100%);
+    filter: saturate(200%);
+}
+
+.oyster:active {
+    filter: brightness(150%);
+}
+
+@keyframes bright {
+    0% { filter:brightness(2.0); }
+    50% { filter:brightness(0.1); }
+    100% { filter:brightness(2.0); }
+}
+
+@keyframes fish-swim {
+    0% { --tX: -10vw ; }
+    25% { --tX: 0vw ; }
+    50% { --tX: 10vw ; }
+    75% { --tX: 20vw ; }
+    100% { --tX: 30vw; }
+}
+@keyframes fish-hover {
+    0% { --tY:0px ; }
+    50% {--tY:40px;}
+    100% { --tY:0px; }
+}
+
+@keyframes octopus-swim {
+    0% { --tY:20vh ;
+        filter: opacity(10%) }
+    25% {--tY:30vh;
+        filter: opacity(30%);}
+    50% {--tY:40vh;
+        filter: opacity(100%);}
+    75% {--tY:30vh;
+        filter: opacity(60%);}
+    100% { --tY:20vh; 
+        filter: opacity(10%);}
+}
+
+
+@keyframes moonn {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX( -100vw ); }
+    100% { transform: translateX( 80vw ); }
+}
+
+@keyframes rockColour {
+    0% { filter:brightness(2.0); }
+    50% { filter:brightness(1); }
+    100% { filter:brightness(2.0); }
+}

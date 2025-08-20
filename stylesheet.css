@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Viaoda+Libre&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+html {
+    display: flex;
+    color: #360F33;
+}
+
+body {
+    margin: 0;
+    overflow: scroll;
+}
+
+.banner {
+    height: 80vh;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #9468B6;
+    background-image: linear-gradient(#8d2fd4,#9468B6);
+
+}
+
+.title {
+    font-family: "Viaoda Libre";
+    font-size: 15vmin;
+    color: white;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    transform: translateY(-60px);
+}
+
+
+
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 10vh;
+    align-items: center;
+    width: 100%;
+    z-index: 101;
+    
+}
+
+.navitem {
+    padding: 5%;
+    font-family: "Figtree";
+    font-size: 4vmin;
+    text-decoration: none;
+    color: #9468B6;
+
+}
+
+.navitem:hover {
+    text-decoration: underline;
+    transition: ease;
+    transition-duration: 3s;
+}
+
+#name1 {
+    height: 30vh;
+}
+
+.intro {
+    text-align: center;
+    height: 30vh;
+    margin-top: -10%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.name {
+    font-family: "Figtree";
+    font-size: 6vmin;
+    color: #360F33;
+}
+
+.vector {
+    width: 100%;
+    height: auto;
+    transform: translateY(-80%);
+    position: static;    
+    object-fit: fill;
+    max-height: 50px;
+
+    
+}
+
+.vector img {
+    object-fit: fill;
+}
+
+.large {
+    font-family: "Figtree";
+    font-size: 4vmin;
+    font-weight: lighter;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+    color: #360F33;
+
+}
+
+.headingp {
+    font-family: "Figtree";
+    font-size: 6vmin;
+    margin-left: 5%;
+    padding-top: 5%;
+    margin-bottom: -3%;
+}
+
+section{
+    height: 80%;
+    overflow: hidden;
+
+}
+
+
+
+.annaimg {
+    width: auto;
+    height: 100%;
+
+
+}
+
+.luxuryimg {
+    width: auto;
+    height: 120%;
+}
+ .image {
+    mix-blend-mode:color;
+    overflow: hidden;
+
+
+ }
+
+img {
+    min-height: 300px;
+    object-fit: cover;
+
+}
+ 
+@media only screen and (max-width:80px) {
+    .image {
+        width: 90%;
+        height: 50vh;
+    }
+}
+
+
+.projects {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.grid {
+    margin: 5%;
+
+}
+
+.object {
+    width: 40vw;
+    overflow: hidden;
+    height: 50vh;
+    min-width: 390px;
+    min-height: 300px;
+    align-items: center;  
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+    color: hsla(120, 100%, 25%, 0);
+    background-color: #2fbdd900;
+    font-family: "Figtree";
+    font-size: 4vmin;
+    
+}
+
+.object:hover {
+    background-color: #D7F5FF;
+    color: green;
+    box-shadow: 10px 10px 20px  rgb(142, 142, 142);
+    mix-blend-mode: normal;
+    stroke-opacity: 0%;
+}
+
+.hover {
+    text-decoration: none;
+    position: absolute;
+    width: 35vw;
+    margin-bottom: 5%;
+
+}
+
+.grid {
+    overflow: hidden;
+}
+
+.title2 {
+    font-family: "Viaoda Libre";
+    font-size: 7vmin;
+    color: white;
+    text-shadow: 5px 5px 20px  #000000;
+    margin-top: -20%;
+    padding: 5%;
+    height: 6vh;
+    width: 90%;
+    align-items: baseline;
+}
+
+.poster img {
+    height: 120%;
+    width: auto;
+}
+
+.poster {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+}
+
+.moonimg {
+    width: auto;
+    height: 120%;
+}
+
+.qld {
+    width: auto;
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mermaidimg {
+    height: 100%;
+    width: auto;
+}
+
+.footer {
+    height: 40vh;
+    background-color: #2FBDD9;
+    margin-top: 10%;
+}
