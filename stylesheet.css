@@ -73,7 +73,7 @@ body {
 
 .intro {
     text-align: center;
-    height: 30vh;
+    height: 40vh;
     margin-top: -10%;
     justify-content: space-evenly;
     display: flex;
@@ -154,7 +154,7 @@ img {
 
 }
  
-@media only screen and (max-width:80px) {
+@media only screen and (max-width:60px) {
     .image {
         width: 90%;
         height: 50vh;
